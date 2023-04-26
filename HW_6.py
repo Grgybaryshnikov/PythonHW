@@ -12,3 +12,25 @@ def prog(a, b, c):
     return result
 print(prog(a, b, c))
 
+
+# 2: Определить индексы элементов массива (списка),
+# значения которых принадлежат заданному диапазону (т.е. не
+# меньше заданного минимума и не больше заданного
+# максимума)
+# Ввод: [-5, 9, 0, 3, -1, -2, 1,
+# 4, -2, 10, 2, 0, -9, 8, 10, -9,
+# 0, -5, -5, 7]
+# Вывод: [1, 9, 13, 14, 19]
+
+nums = list(map(int, input("Введите числа через пробел:").split()))
+min_v = int(input('Введите минимальное число диапазона: '))
+max_v = int(input('Введите максимальное число диапазона: '))
+
+def search(nums, min_v, max_v):
+    result = []
+    for i in range(len(nums)):
+        if max_v > nums[i] > min_v:             
+             result.append(i)
+    return result
+print(search(nums, min_v, max_v))
+
