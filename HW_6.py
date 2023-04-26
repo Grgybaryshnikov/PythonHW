@@ -9,6 +9,6 @@ result= []
 def prog(a, b, c):
     for i in range(b):
         result.append(a + i * c)    
-print(result)
-
+    return result
+print(prog(a, b, c))
 
